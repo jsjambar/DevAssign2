@@ -51,6 +51,82 @@ namespace Assignment2
                         }
                     }
                 },
+                { "employee_roles" , new BsonArray
+                    {
+                        new BsonDocument
+                        {
+                            { "employee", "1234" },
+                            { "role", "Software Engineer" }
+                        },
+                        new BsonDocument
+                        {
+                            { "employee", "1234" },
+                            { "role", "Web Developer" }
+                        },
+                        new BsonDocument
+                        {
+                            { "employee", "5678" },
+                            { "role", "Software Engineer" }
+                        },
+                        new BsonDocument
+                        {
+                            { "employee", "5678" },
+                            { "role", "CEO" }
+                        },
+                    }
+                },
+                { "employee_addresses" , new BsonArray
+                    {
+                        new BsonDocument
+                        {
+                            { "employee", "1234" },
+                            { "address", new BsonArray {
+                                new BsonDocument
+                                {
+                                    { "street", "Wijnhaven"},
+                                    { "number", 107},
+                                    { "city", "Rotterdam"}
+                                }
+                            } }
+                        },
+                        new BsonDocument
+                        {
+                            { "employee", "1234" },
+                            { "address", new BsonArray {
+                                new BsonDocument
+                                {
+                                    { "street", "Werkplaats 1"},
+                                    { "number", 1},
+                                    { "city", "Rotterdam"}
+                                }
+                            } }
+                        },
+                        new BsonDocument
+                        {
+                            { "employee", "5678" },
+                            { "address", new BsonArray {
+                                new BsonDocument
+                                {
+                                    { "street", "Wijnhaven"},
+                                    { "number", 7},
+                                    { "city", "Rotterdam"}
+                                }
+                            } }
+                        },
+                        new BsonDocument
+                        {
+                            { "employee", "5678" },
+                            { "address", new BsonArray {
+                                new BsonDocument
+                                {
+                                    { "street", "Sugoi Cherry Blossoms"},
+                                    { "number", 1},
+                                    { "city", "Amazing Japanese Citye31de"}
+                                }
+                            } }
+                        }
+                    }
+                }
             };
 
             var collection = _database.GetCollection<BsonDocument>("restaurants");
